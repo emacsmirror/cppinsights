@@ -18,3 +18,5 @@ jobs:
         with:
           file: "cppinsights.el"
           warnings_as_errors: true
+      - name: Run configuration tests
+        run: emacs -Q --batch -L . -l test/cppinsights-test.el -f ert-run-tests-batch-and-exit
